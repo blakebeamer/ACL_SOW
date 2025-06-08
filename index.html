@@ -1,619 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scope of Work - Austin Creative Landscaping | BMR Creative</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scope of Work – Austin Creative Landscaping | BMR Creative</title>
+  <!-- Load Clash Display + Clash Grotesk -->
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Clash+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #fafafa;
-        }
+    body {
+      font-family: 'Clash Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 40px rgba(0,0,0,0.05);
-            min-height: 100vh;
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+      min-height: 100vh;
+    }
 
-        .header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            padding: 60px 50px 50px;
-            position: relative;
-            overflow: hidden;
-        }
+    .header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: white;
+      padding: 60px 50px 50px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
 
-        .brand {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+    .brand {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 24px;
+    }
 
-        .brand-logo {
-            width: 50px;
-            height: auto;
-            filter: brightness(0) invert(1);
-        }
+    .brand img {
+      height: 48px;
+    }
 
-        .brand-text h1 {
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: -2px;
-            margin-bottom: 4px;
-        }
+    .brand .tagline {
+      font-size: 14px;
+      opacity: 0.7;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
 
-        .brand-text .tagline {
-            font-size: 16px;
-            opacity: 0.8;
-            font-weight: 300;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+    .proposal-header {
+      margin-top: 30px;
+      position: relative;
+      z-index: 2;
+    }
 
-        .proposal-header {
-            margin-top: 40px;
-            position: relative;
-            z-index: 2;
-        }
+    .proposal-header h2 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
 
-        .proposal-header h2 {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
+    .client-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
 
-        .client-info {
-            display: flex;
-            gap: 40px;
-            font-size: 14px;
-            opacity: 0.9;
-        }
+    .content {
+      padding: 50px;
+      font-size: 15px;
+    }
 
-        .content {
-            padding: 50px;
-        }
+    .content p {
+      margin-bottom: 20px;
+      color: #444;
+    }
 
-        .intro {
-            margin-bottom: 60px;
-            font-size: 16px;
-            line-height: 1.8;
-            color: #444;
-        }
+    .footer {
+      background: #f8f9fa;
+      padding: 40px 50px;
+      border-top: 1px solid #e8e8e8;
+    }
 
-        .intro p {
-            margin-bottom: 20px;
-        }
+    .footer h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
 
-        .service-item {
-            margin-bottom: 50px;
-            border: 1px solid #e8e8e8;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
+    .footer p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 15px;
+    }
 
-        .service-item:hover {
-            border-color: #1a1a1a;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
+    .signature {
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
 
-        .service-header {
-            background: #f8f9fa;
-            padding: 25px 30px;
-            border-bottom: 1px solid #e8e8e8;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    @media (max-width: 768px) {
+      .container {
+        margin: 0;
+        box-shadow: none;
+      }
 
-        .service-number {
-            background: #1a1a1a;
-            color: white;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 14px;
-        }
+      .header {
+        padding: 40px 30px 35px;
+      }
 
-        .service-title {
-            flex: 1;
-            margin-left: 20px;
-        }
+      .brand img {
+        height: 40px;
+      }
 
-        .service-title h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 4px;
-        }
+      .proposal-header h2 {
+        font-size: 24px;
+      }
 
-        .service-price {
-            background: #1a1a1a;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 14px;
-        }
+      .client-info {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-        .service-content {
-            padding: 30px;
-        }
+      .content {
+        padding: 30px;
+      }
 
-        .service-overview {
-            margin-bottom: 25px;
-            font-size: 15px;
-            line-height: 1.7;
-            color: #555;
-        }
-
-        .service-details {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .service-details h4 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .service-details ul {
-            list-style: none;
-        }
-
-        .service-details li {
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #666;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .service-details li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-
-        .pricing-summary {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin: 50px 0;
-        }
-
-        .pricing-summary h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .pricing-table {
-            display: grid;
-            gap: 15px;
-        }
-
-        .pricing-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .pricing-row:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-service {
-            flex: 1;
-            font-size: 15px;
-        }
-
-        .pricing-amount {
-            font-weight: 600;
-            font-size: 15px;
-        }
-
-        .total-row {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .note {
-            background: #f0f9ff;
-            border: 1px solid #bae6fd;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 30px 0;
-        }
-
-        .note h4 {
-            color: #0369a1;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .note p {
-            color: #0c4a6e;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .footer {
-            background: #f8f9fa;
-            padding: 40px 50px;
-            border-top: 1px solid #e8e8e8;
-        }
-
-        .footer h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .footer p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .signature {
-            margin-top: 30px;
-            font-size: 16px;
-            font-weight: 500;
-            color: #1a1a1a;
-        }
-
-        .optional {
-            opacity: 0.7;
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 0;
-                box-shadow: none;
-            }
-            
-            .header {
-                padding: 40px 30px 35px;
-            }
-            
-            .brand {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
-            
-            .brand-text h1 {
-                font-size: 36px;
-            }
-            
-            .proposal-header h2 {
-                font-size: 24px;
-            }
-            
-            .client-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .content {
-                padding: 30px;
-            }
-            
-            .service-header {
-                padding: 20px;
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            
-            .service-title {
-                margin-left: 0;
-            }
-            
-            .pricing-summary {
-                padding: 30px 25px;
-            }
-            
-            .footer {
-                padding: 30px;
-            }
-        }
-    </style>
+      .footer {
+        padding: 30px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="brand">
-                <svg class="brand-logo" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="currentColor">
-                        <!-- B -->
-                        <path d="M20 30 L20 90 L50 90 Q65 90 65 75 Q65 65 55 62.5 Q65 60 65 50 Q65 30 50 30 Z M35 42 L48 42 Q52 42 52 47 Q52 52 48 52 L35 52 Z M35 64 L50 64 Q55 64 55 70 Q55 76 50 76 L35 76 Z"/>
-                        <!-- M -->
-                        <path d="M80 30 L80 90 L95 90 L95 50 L108 80 L115 80 L128 50 L128 90 L143 90 L143 30 L123 30 L111.5 65 L100 30 Z"/>
-                        <!-- R -->
-                        <path d="M160 30 L160 90 L175 90 L175 65 L185 65 L195 90 L210 90 L195 62 Q205 58 205 48 Q205 30 190 30 Z M175 42 L188 42 Q192 42 192 47 Q192 52 188 52 L175 52 Z"/>
-                    </g>
-                </svg>
-                <div class="brand-text">
-                    <h1>BMR</h1>
-                    <div class="tagline">Design. Direction. Brand.</div>
-                </div>
-            </div>
-            <div class="proposal-header">
-                <h2>Scope of Work Outline</h2>
-                <div class="client-info">
-                    <div><strong>Client:</strong> Austin Creative Landscaping</div>
-                    <div><strong>Prepared for:</strong> Abey</div>
-                    <div><strong>Prepared by:</strong> Blake Beamer, BMR Creative</div>
-                </div>
-            </div>
-        </header>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="https://blakebeamer.github.io/ACL_SOW/BMR_White-01.svg" alt="BMR Logo" />
+        <div class="tagline">Design. Direction. Brand.</div>
+      </div>
+      <div class="proposal-header">
+        <h2>Scope of Work Outline</h2>
+        <div class="client-info">
+          <div><strong>Client:</strong> Austin Creative Landscaping</div>
+          <div><strong>Prepared for:</strong> Abey</div>
+          <div><strong>Prepared by:</strong> Blake Beamer, BMR Creative</div>
+        </div>
+      </div>
+    </header>
 
-        <main class="content">
-            <section class="intro">
-                <p>Hey Abey —</p>
-                
-                <p>Appreciate you pulling me into this — I've really enjoyed our back and forth so far. After helping out with your backyard project, we started talking about how to elevate your landscaping business online, especially around custom planter boxes. That led to some deeper exploration.</p>
-                
-                <p>A few weeks back, I mocked up a concept for a "Build Your Planter Box" landing page and walked you through the idea — a 3-step flow where customers choose their size, material, and plants. That walkthrough got us talking more seriously about SEO, site structure, brand perception, and how to position this part of your business as premium and custom. From there, I started digging into your Squarespace site and have been working through a backend audit to understand what's working, what's not, and where we can level things up.</p>
-                
-                <p>We also talked about potentially trading work (more backyard projects) in exchange for some of this creative and strategy work. So just to keep things clear and fair, this doc lays out what I'd normally charge for these services if we weren't working through a trade or friend setup. These are market-value estimates to help you see the full scope of what I can offer. None of it's set in stone — we can pick and choose, go in phases, or rework any of it. If we do decide to move forward officially, I'll turn this into a signed, itemized agreement.</p>
-                
-                <p>Let me know what stands out or what you'd want to prioritize.</p>
-            </section>
+    <main class="content">
+      <p>Hey Abey —</p>
+      <p>Appreciate you pulling me into this — I've really enjoyed our back and forth so far. After helping out with your backyard project, we started talking about how to elevate your landscaping business online, especially around custom planter boxes. That led to some deeper exploration.</p>
+      <p>A few weeks back, I mocked up a concept for a "Build Your Planter Box" landing page and walked you through the idea — a 3-step flow where customers choose their size, material, and plants. That walkthrough got us talking more seriously about SEO, site structure, brand perception, and how to position this part of your business as premium and custom. From there, I started digging into your Squarespace site and have been working through a backend audit to understand what's working, what's not, and where we can level things up.</p>
+      <p>We also talked about potentially trading work (more backyard projects) in exchange for some of this creative and strategy work. So just to keep things clear and fair, this doc lays out what I'd normally charge for these services if we weren't working through a trade or friend setup. These are market-value estimates to help you see the full scope of what I can offer. None of it's set in stone — we can pick and choose, go in phases, or rework any of it. If we do decide to move forward officially, I'll turn this into a signed, itemized agreement.</p>
+      <p>Let me know what stands out or what you'd want to prioritize.</p>
+    </main>
 
-            <section class="services">
-                <article class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">1</div>
-                        <div class="service-title">
-                            <h3>Website Backend + SEO Optimization</h3>
-                        </div>
-                        <div class="service-price">$900–$1,200</div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-overview">
-                            <p>Your website is one of your most valuable tools for attracting new customers — especially those looking for high-end or custom landscaping work. But if it's not showing up on Google or loading slowly, you're losing business before the conversation starts.</p>
-                            
-                            <p>This phase focuses on technical and on-page SEO improvements, speed optimization, and general cleanup behind the scenes. These updates improve search visibility, boost site performance, and give your brand a better shot at landing new jobs online — especially as you introduce the planter box offering.</p>
-                        </div>
-                        
-                        <div class="service-details">
-                            <h4>Key Improvements</h4>
-                            <ul>
-                                <li>Add/update metadata (titles, descriptions, keywords)</li>
-                                <li>Add feature images for page previews/sharing</li>
-                                <li>Compress oversized images for faster load times</li>
-                                <li>Clean up page URLs and streamline structure</li>
-                                <li>Basic accessibility updates (headers, contrast, alt tags)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="note">
-                            <h4>Note</h4>
-                            <p>The audit phase is already underway and free of charge — this was part of my initial consulting just to see what's possible and how I can help. A full report and action list can be delivered once we formalize next steps.</p>
-                        </div>
-                    </div>
-                </article>
+    <footer class="footer">
+      <h3>Timing & Availability</h3>
+      <p>This is a side project I'd be taking on outside of my full-time job, which means I'll be working mostly nights and weekends. I'll be moving at a more flexible pace — especially since parts of this involve consultation, exploration, and iteration. That said, I'm available for questions or feedback along the way and happy to hop on a call or reply to anything after hours. Just shoot me a message anytime, and I'll follow up as soon as I can.</p>
 
-                <article class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">2</div>
-                        <div class="service-title">
-                            <h3>Website Design Refresh</h3>
-                        </div>
-                        <div class="service-price">$1,000–$1,400</div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-overview">
-                            <p>As you start to position Austin Creative Landscaping as a more modern, custom, and premium service — your site needs to reflect that. Right now, it works, but with a more polished layout, updated hierarchy, and improved readability across devices, we can make the whole experience feel more elevated and intentional.</p>
-                            
-                            <p>This refresh builds trust with prospective customers by making the site easier to navigate, easier to read, and more aligned with the level of work you actually deliver. It's a foundation upgrade that supports every other change going forward.</p>
-                        </div>
-                        
-                        <div class="service-details">
-                            <h4>What's Covered</h4>
-                            <ul>
-                                <li>Adjusting spacing, fonts, layout consistency</li>
-                                <li>Improving mobile responsiveness</li>
-                                <li>Enhancing hierarchy and readability</li>
-                                <li>Addressing accessibility issues (contrast, navigation, etc.)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
+      <p>And just to be transparent — my hope is that, if this all feels valuable and works out well, we could align on a trade that covers around $6K–$8K worth of landscaping work on your end (with me covering any difference in cash if needed). The scope above reflects a solid baseline of market value for what I'm putting in.</p>
 
-                <article class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">3</div>
-                        <div class="service-title">
-                            <h3>Services Page Update + New Planter Box Page</h3>
-                        </div>
-                        <div class="service-price">$1,100–$1,500</div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-overview">
-                            <p>This is where we start building toward the future of your business — giving planter boxes their own spotlight. The goal here is to restructure the Services section so that customers understand, right away, that this is more than just a landscaping company. It's a custom build shop with unique, premium planter solutions.</p>
-                            
-                            <p>We'll simplify your main Services page and create a dedicated, visually rich Planter Box landing page that walks people through your process and capabilities. This helps turn a casual visitor into a curious, inspired customer — and it sets you apart from every other general landscaper out there.</p>
-                        </div>
-                        
-                        <div class="service-details">
-                            <h4>Included</h4>
-                            <ul>
-                                <li>Services overview page design</li>
-                                <li>Planter Box landing page (based on the 3-step mockup I shared)</li>
-                                <li>Copywriting and layout for both pages</li>
-                                <li>Site menu update to feature both clearly</li>
-                                <li>Final content/image approvals before publishing</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
+      <p>Let me know if you want this cleaned up into a shareable page or PDF. Happy to start with whatever piece feels most urgent.</p>
 
-                <article class="service-item optional">
-                    <div class="service-header">
-                        <div class="service-number">4</div>
-                        <div class="service-title">
-                            <h3>Brand Identity Modernization <span style="font-size: 14px; opacity: 0.7;">(Optional)</span></h3>
-                        </div>
-                        <div class="service-price">$950–$1,300</div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-overview">
-                            <p>If we want the site — and your business — to look like it's leveling up, a brand refresh can help close the loop. While this won't be a full brand overhaul, a clean, modern update to your logo will go a long way toward reinforcing that this is a pro-level operation. Something that looks good on-site, on invoices, on metal tags, or even shirts.</p>
-                            
-                            <p>This would be a lightweight identity update: one or two refined logo options, final files, and implementation across your site.</p>
-                        </div>
-                        
-                        <div class="service-details">
-                            <h4>Included</h4>
-                            <ul>
-                                <li>1–2 refined logo concepts to choose from</li>
-                                <li>Final files (SVG, PNG) for web use</li>
-                                <li>Implementation across the site (logo swaps, spacing updates)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">5</div>
-                        <div class="service-title">
-                            <h3>AI Consultation + Implementation</h3>
-                        </div>
-                        <div class="service-price">$850–$1,200</div>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-overview">
-                            <p>Most customers can't picture a custom planter box in their head — they need to see it. This is where AI comes in. I can build you a lightweight consultation tool using ChatGPT + image-generation tools that helps you produce simple planter mockups for prospective clients.</p>
-                            
-                            <p>It won't replace full design renderings, but it can act as a quick pre-visualization tool that makes your consultation process feel way more legit and creative. This could be a game-changer for closing bigger or more custom projects.</p>
-                        </div>
-                        
-                        <div class="service-details">
-                            <h4>How it Could Work</h4>
-                            <ul>
-                                <li>The landing page introduces a simple 3-step flow (size → material → plant type)</li>
-                                <li>They contact you with preferences</li>
-                                <li>You input specs into a ChatGPT-based template I build for you</li>
-                                <li>ChatGPT + AI tools generate a basic mockup</li>
-                                <li>You send them a concept image to help sell the job</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="service-details">
-                            <h4>Included</h4>
-                            <ul>
-                                <li>Custom GPT prompt templates</li>
-                                <li>Setup and walkthrough of workflow</li>
-                                <li>Sample AI visuals using tools like Midjourney or Sora</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-            </section>
-
-            <section class="pricing-summary">
-                <h3>Summary of Services + Price Ranges</h3>
-                <div class="pricing-table">
-                    <div class="pricing-row">
-                        <div class="pricing-service">Backend SEO Implementation</div>
-                        <div class="pricing-amount">$900–$1,200</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-service">Website Design Refresh</div>
-                        <div class="pricing-amount">$1,000–$1,400</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-service">Services Page + Planter Box Page</div>
-                        <div class="pricing-amount">$1,100–$1,500</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-service">Optional Brand Identity Modernization</div>
-                        <div class="pricing-amount">$950–$1,300</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-service">AI Consultation + Mockup Workflow</div>
-                        <div class="pricing-amount">$850–$1,200</div>
-                    </div>
-                </div>
-                
-                <div class="total-row">
-                    <div class="pricing-row">
-                        <div class="pricing-service">Total (if everything included):</div>
-                        <div class="pricing-amount">$4,800–$6,600</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-service">Total (core site updates only, no brand or AI):</div>
-                        <div class="pricing-amount">~$3,000–$4,100</div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <h3>Timing & Availability</h3>
-            <p>This is a side project I'd be taking on outside of my full-time job, which means I'll be working mostly nights and weekends. I'll be moving at a more flexible pace — especially since parts of this involve consultation, exploration, and iteration. That said, I'm available for questions or feedback along the way and happy to hop on a call or reply to anything after hours. Just shoot me a message anytime, and I'll follow up as soon as I can.</p>
-            
-            <p>And just to be transparent — my hope is that, if this all feels valuable and works out well, we could align on a trade that covers around $6K–$8K worth of landscaping work on your end (with me covering any difference in cash if needed). The scope above reflects a solid baseline of market value for what I'm putting in.</p>
-            
-            <p>Let me know if you want this cleaned up into a shareable page or PDF. Happy to start with whatever piece feels most urgent.</p>
-            
-            <div class="signature">
-                — BMR (Blake at bmrcreative.com)
-            </div>
-        </footer>
-    </div>
+      <div class="signature">
+        — BMR (Blake at bmrcreative.com)
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
